@@ -1,0 +1,19 @@
+alg_name: lp_bc
+benchmark: scienceworld # 'scienceworld' or 'alfworld'
+max_new_tokens: 32
+max_new_tokens_progress: 150
+do_sample: false
+use_lora: true
+r: 16
+model_name: meta-llama/Llama-3.2-3B-Instruct
+ds_config: ./config/zero2.json
+check_path: ./check_points
+env_step_limit: 50
+eval_freq: 200  # skip eval in epoch0 for saving time, and could be less frequent to save time
+gama: 0.99
+epochs: 5
+lr: 0.0001
+seed: 0
+mode: bc
+half: all
+eval_all: true

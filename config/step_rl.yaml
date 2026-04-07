@@ -1,0 +1,25 @@
+alg_name: lp_rl_exp
+benchmark: scienceworld
+max_new_tokens: 20
+max_new_tokens_progress: 150
+do_sample: false
+use_lora: true
+r: 16
+medium_dataset:
+  - mediumall_seed1_num3072_llama.json
+model_name: meta-llama/Meta-Llama-3-8B-Instruct
+bc_model: ./check_points/scienceworld/lp_bc/meta-llama/Meta-Llama-3-8B-Instruct_batch128_step1500_test63.246
+ds_config: ./config/zero2.json
+check_path: ./check_points
+env_step_limit: 50
+eval_freq: 250
+warmup_steps: 100
+gama: 0.99
+epochs: 3
+seed: 0
+actor_lr: 1.0e-05
+critic_lr: 0.0001
+tau: 0.2
+weight_tau: 0.95
+mode: rl
+use_adv: true

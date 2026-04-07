@@ -1,0 +1,13 @@
+{
+  "bfloat16": {
+    "enabled": true
+  },
+  "fp16": {
+    "enabled": false
+  },
+  "zero_optimization": {
+      "stage": 0 
+  },
+  "wall_clock_breakdown": false,
+  "train_micro_batch_size_per_gpu": 1
+}

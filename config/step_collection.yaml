@@ -1,0 +1,14 @@
+alg_name: collection
+benchmark: scienceworld # 'scienceworld' or 'alfworld'
+max_new_tokens: 32
+max_new_tokens_progress: 150
+do_sample: true
+temperature: 1
+use_lora: true
+r: 16
+model_name: meta-llama/Meta-Llama-3-8B-Instruct
+collect_model_path: ./check_points/scienceworld/lp_bc/meta-llama/Meta-Llama-3-8B-Instruct_batch128_step1500_test63.246 # Model initialized after behavior cloning
+ds_config: ./config/zero2.json
+env_step_limit: 50
+collect_vari_num_per_gpu: 1 # ScienceWorld=16 (8 GPUs), AlfWorld=500 (8 GPUs, 6 working)
+seed: 1

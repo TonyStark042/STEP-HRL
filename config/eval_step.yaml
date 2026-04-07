@@ -1,0 +1,13 @@
+alg_name: eval_step
+benchmark: alfworld # 'scienceworld' or 'alfworld'
+max_new_tokens: 32
+max_new_tokens_progress: 150
+use_lora: true
+model_name: google/gemma-1.1-7b-it
+ds_config: ./config/ds_infer.json
+check_path: ./check_points
+load_path: ./check_points/alfworld/lp_bc/google/gemma-1.1-7b-it_batch128_step1000_test0.978
+dev_or_test: dev
+env_step_limit: 50
+all: true
+seed: 0
